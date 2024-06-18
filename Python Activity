@@ -1,0 +1,50 @@
+# 5 Data Type Examples
+import numpy as np
+import pandas as pd
+
+Boolean = True
+String = "Hello World"
+Integer = 74
+Complex_No = 1+2
+Float = 2.6
+
+# Function of integer output "odd" vs "even" values
+def odd_or_even(x):
+    if (x % 2) == 0:
+        return "even"
+    else:
+        return "odd"
+
+print(odd_or_even(75))
+
+# Loop Function to output sum of list elements
+squared = [4,9,16,25,36,47]
+sum = 0
+for x in squared:
+    sum += x
+print(sum)
+
+# Person Class Name inputs and greet message
+class person:
+    def __init__(self,name,age,gender):
+        self.name = "Caroline"
+        self.age = 44
+        self.gender = "female"
+    def greet(self):
+        print(f"my name is {self.name}.")
+
+# Greet message Output method.
+p = person("Caroline",44,"female")
+p.greet()
+
+# 2D Array
+a2D = np.array([[1,2,3],[4,5,6]])
+print(a2D)
+
+# Array to DataFrame Conversion
+df = pd.DataFrame(a2D, columns=['A','B','C'])
+print(df)
+
+#Index and column returns
+df.iloc[1]
+print(df.iloc[1]['B'])
